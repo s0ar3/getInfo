@@ -46,7 +46,7 @@ permissions() {
     done
 
     chk="$(ls -ld "${given}")"
-    ownr="$(echo -n "${chk}" | cut -f3 -d " ")"
+    ownr="$(printf "%s" "${chk}" | cut -f3 -d " ")"
     printf "%s" " Owner: ${ownr}" 
     printf "\n%s" "[ ${chk} ]"
 
