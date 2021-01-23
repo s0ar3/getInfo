@@ -48,8 +48,7 @@ permissions() {
     chk="$(ls -ld "${given}")"
     ownr="$(printf "%s" "${chk}" | cut -f3 -d " ")"
     printf "%s" " Owner: ${ownr}" 
-    printf "\n%s" "[ ${chk} ]"
-
+    printf "\n%s\n" "[ ${chk} ]"
 }
 
 main() {
@@ -77,7 +76,7 @@ main() {
         fi
     done
 
-    printf "\n%41s\n" " " | tr ' ' '-'
+    printf "%41s\n" " " | tr ' ' '-'
 
     cnt "${count}"
 }
