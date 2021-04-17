@@ -67,7 +67,7 @@ main() {
 
     for ((i=0;i<${#arrInput[@]};i++)); do
         if [[ ! -e ${arrInput[i]} ]]; then
-            printf "\n\e[31m%s\e[0m %s %s" "✘" "${arrInput[i]}"  "doesn't exists"
+            printf "\n\e[31m%s\e[0m %s %s\n" "✘" "${arrInput[i]}"  "doesn't exists"
             ((count++))
         else
             printf "\n\e[32m%s\e[0m %s %s" "✔" "${arrInput[i]}" "exists -> "
