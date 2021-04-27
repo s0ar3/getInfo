@@ -4,6 +4,7 @@ declare -a arrInput=("$@")
 
 cnt() {
     local counting="${1}"
+    
     if [[ ${counting} -eq "${#arrInput[@]}" ]]; then
         printf "\e[31m%s\e[0m\n\n" " All elements from input doesn't exists"
     elif [[ "${counting}" -gt 0 ]]; then
